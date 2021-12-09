@@ -1,5 +1,11 @@
-### About
+# Cinema Room REST Service
+
+## About
 Always wanted to have your private movie theater and screen only the movies you like? You can buy a fancy projector and set it up in a garage, but how can you sell tickets? Having a booth is old-fashioned, so let's create a special service for that! Make good use of Spring and write a REST service that can show the available seats, sell and refund tickets, and display the statistics of your venue. Pass me the popcorn, please!
+
+
+# Stage 1/4: The show begins
+## Description
 
 Stage 1/4: The show begins
 Description
@@ -7,11 +13,12 @@ There are many fun activities on the planet Earth, and one of them is going to t
 
 Let's make our virtual movie theater with the help of a REST service. Our movie theater has 9 rows with 9 seats each. In this stage, you need to create a simple endpoint that will return the information about the cinema in JSON format.
 
-Objectives
-Implement the /seats endpoint that handles GET requests and returns the information about the movie theatre.
+## Objectives
+Implement the **_/seats_** endpoint that handles **_GET_** requests and returns the information about the movie theatre.
 
 The response should contain information about the rows, columns, and available seats. The response is a JSON object and has the following format:
 
+```json5
 {
    "total_rows":5,
    "total_columns":6,
@@ -33,14 +40,15 @@ The response should contain information about the rows, columns, and available s
       }
    ]
 }
+```
 Our cinema room has 9 rows with 9 seats each, so the total number of respective rows and columns also amounts to 9 each.
 
-Note that the availabe_seats array contains 81 elements, as there are 81 seats in the room.
+Note that the **_availabe_seats_** array contains 81 elements, as there are 81 seats in the room.
 
-Example
-Example 1: a GET /seats request
-Response body:
-
+### Example
+Example 1: a **_GET /seats_** request
+#### Response body:
+```json5
 {
    "total_rows":9,
    "total_columns":9,
@@ -70,3 +78,4 @@ Response body:
       }
    ]
 }
+```
